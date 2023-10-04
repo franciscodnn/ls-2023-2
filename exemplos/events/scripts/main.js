@@ -28,6 +28,7 @@ function handleBtnClick(){
     const nomeCompleto = document.querySelector('input[name="nome-completo"]');
     const idade = document.querySelector('input[name="idade"]');
     const curso = document.querySelector('input[name="curso"]');
+    const sexo = document.querySelector('input[name="sexo"]:checked');
 
     const h3 = document.querySelector('h3');
 
@@ -38,7 +39,7 @@ function handleBtnClick(){
         h3.classList.add('idade-incorreta');
     }   
 
-    h3.innerHTML = `${nomeCompleto.value}; ${idade.value}; ${curso.value}`;
+    h3.innerHTML = `${nomeCompleto.value}; ${idade.value}; ${curso.value}; ${sexo.value}`;
     nomeCompleto.value = "";
     idade.value = "";
     curso.value = "";

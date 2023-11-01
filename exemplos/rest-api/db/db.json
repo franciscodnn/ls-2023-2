@@ -1,0 +1,58 @@
+{
+  "investments": [
+    {
+      "id": 1,
+      "titulo": "Tesouro Selic 2029",
+      "valor": "100,00",
+      "origem": "Tesouro Nacional",
+      "categoria": "Pos",
+      "dataCriacao": "2023-03-02",
+      "taxa": "100% Selic"
+    },
+    {
+      "id": 2,
+      "titulo": "Tesouro Selic 2029",
+      "valor": "100,00",
+      "origem": "Tesouro Nacional",
+      "categoria": "IPCA",
+      "dataCriacao": "2023-03-02",
+      "taxa": "6,00% + IPCA"
+    }
+  ],
+  "cursos": [
+    {
+      "id": 15,
+      "name": "TSI",
+      "periodos": 6
+    },
+    {
+      "id": 2,
+      "name": "Engenharia Elétrica",
+      "periodos": 10
+    },
+    {
+      "name": "A",
+      "id": 3
+    },
+    {
+      "id": 10,
+      "name": "Redes de computadores",
+      "periodos": 6
+    },
+    {
+      "id": 101,
+      "name": "Design de Interiores",
+      "periodos": 6
+    },
+    {
+      "id": 21,
+      "name": "Protocolos",
+      "períodos": 12
+    },
+    {
+      "id": 40,
+      "name": "Arquitetura",
+      "periodos": 10
+    }
+  ]
+}

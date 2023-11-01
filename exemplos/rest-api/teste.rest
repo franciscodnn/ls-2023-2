@@ -1,0 +1,31 @@
+### GET
+GET http://10.0.4.64:3000/cursos/2
+
+### POST
+POST http://10.0.4.64:3000/cursos
+Content-type: application/json
+
+{
+    "id": 101,
+    "name": "Design de Interiores",
+    "periodos": 6
+}
+
+### DELETE
+DELETE http://10.0.4.64:3000/cursos/18
+
+### PATCH
+PATCH http://10.0.4.64:3000/cursos/3
+Content-type: application/json
+
+{
+    "name2": "Bacharelado em Administração"
+}
+
+### PUT
+PUT http://10.0.4.64:3000/cursos/3
+Content-type: application/json
+
+{
+    "name": "Administração"
+}

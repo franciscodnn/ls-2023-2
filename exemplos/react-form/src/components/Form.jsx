@@ -8,16 +8,30 @@ export default function Form({ titulo }){
     const [login, setLogin] = useState('');
     const [senha, setSenha] = useState('');
 
+    const [contato, setContato] = useState({
+        nome: '',
+        idade: 0,
+        login: '',
+        senha: ''
+    });
+
     // nome = 'Francisco'
 
+    function handleChange(event) {
+        setContato({...contato, [event.target.name]: event.target.value});
+    }
+
+    /*
     function handleChangeNome(event) {
-        setNome(event.target.value);
+        setContato({...contato, "nome": event.target.value});
+        // setNome(event.target.value);
 
         console.log(event.target.name);
     }
 
     function handleChangeIdade(event) {
-        setIdade(event.target.value);
+        setContato( {...contato, "idade": event.target.value});
+        // setIdade(event.target.value);
     }
 
     function handleChangeLogin(event) {
@@ -27,6 +41,7 @@ export default function Form({ titulo }){
     function handleChangeSenha(event) {
         setSenha(event.target.value);
     }
+    */
 
     return (
         <>
@@ -36,33 +51,33 @@ export default function Form({ titulo }){
                 <label htmlFor="nome">Nome:</label>
                 <input id="nome" type="text" 
                   name="nome" 
-                  value={ nome } 
-                  onChange={ handleChangeNome }/>
+                  value={ contato.nome } 
+                  onChange={ handleChange }/>
             </div>
             <div>
                 <label htmlFor="idade">Idade:</label>
                 <input id="idade" type="text" name="idade"
-                value={ idade }
-                onChange={ handleChangeIdade } />
+                value={ contato.idade }
+                onChange={ handleChange } />
             </div>
             <div>
                 <label htmlFor="login">login:</label>
                 <input id="login" type="text" name="login"
-                value={ login }
-                onChange={ handleChangeLogin } />
+                value={ contato.login }
+                onChange={ handleChange } />
             </div>
             <div>
                 <label htmlFor="senha">senha:</label>
                 <input id="senha" type="password" name="senha"
-                value={ senha }
-                onChange={ handleChangeSenha } />
+                value={ contato.senha }
+                onChange={ handleChange } />
             </div>
         </form>
         <p>Valor dos inputs:</p>
-        <p>{ nome }</p>
-        <p>{ idade }</p>
-        <p>{ login }</p>
-        <p>{ senha }</p>
+        <p>{ contato.nome }</p>
+        <p>{ contato.idade }</p>
+        <p>{ contato.login }</p>
+        <p>{ contato.senha }</p>
         </>
     );
 }

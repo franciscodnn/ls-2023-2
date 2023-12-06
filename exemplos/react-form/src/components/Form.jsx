@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Form({ titulo }){
     const [nome, setNome] = useState(''); // nome = ''
@@ -10,10 +10,15 @@ export default function Form({ titulo }){
 
     const [contato, setContato] = useState({
         nome: '',
-        idade: 0,
+        idade: 18,
         login: '',
         senha: ''
     });
+
+    useEffect(() => {
+        if(contato.idade >= 18) console.log('Maior de idade');
+        else console.log('Menor de idade');
+    }, []);
 
     // nome = 'Francisco'
 
